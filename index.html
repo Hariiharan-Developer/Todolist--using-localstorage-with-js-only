@@ -3,25 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>todo-app-js</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <title>Todolist- JS</title>
+
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
+<body class="bg-danger">
+     <div id="custom-alert" class="alert alert-danger alert-dismissible fade show" role="alert" style="display:none;">
+  <span id="alert-message"></span>
+  <button type="button" class="btn-close" onclick="hideAlert()" aria-label="Close"></button>
+  
+</div>
     <div class="mb-3">
         <div class="card">
             <div class="card-body">
                 <div class="content">
+                   
+
   <h2>to-do app using javascript</h2>
   <input type="text" class="form-control" id="title" placeholder="Enter task">
   <input type="text" class="form-control" id="description" placeholder="Enter description">
   <button type="submit" class="btn  btn-success mt-3" id="btn">Add Task</button>
-   <p class="mb-1 mt-3 b" id="description" style="color: rgba(0, 0, 0, 0.6);">double click the text will be delete</p>
+  <p class="mb-2 text-muted">this application used to store task&description details are in the localstorage</p>
+ 
   
   </div>
 
-  <div id="list-group"></div>
+  <div id="list-group" class="d-flex flex-column justify-content-center gap-3 text-dark rounded p-3">
+    
+  </div>
+
     </div>
+    
   
     
     <script src="script.js"></script>
